@@ -12,7 +12,8 @@ migrate= Migrate(app, db)
 
 @app.route("/")
 def index():
-    return "<h1>Package Tracker</h1>"
+    packages = Package.query.all()
+    return render_template('package_status.html', packages=packages)
 
 @app.route("/new_package", methods = ['GET', 'POST'])
 def new_package():

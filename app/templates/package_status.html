@@ -1,6 +1,15 @@
 <html>
 
 
+{% for package in packages%}
+   <li>{{package.id}}</li>
+   <li>{{package.sender}}</li>
+   <li>{{package.recipient}}</li>
+   <li>{{package.origin}}</li>
+   <li>{{package.destination}}</li>
+   <li>{{package.location}}</li>
+   <hr>
+{%endfor%}
 
 
 </html>
