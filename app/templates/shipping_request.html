@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Tracker</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('new_package') }}">
+        {{ form.csrf_token }}
+        <h1>Shipping</h1>
+        <p>Sender: {{ form.sender }}</p>
+        <p>Recipient: {{ form.recipient }}</p>
+        <p>Origin: {{ form.origin }}</p>
+        <p>Destination: {{ form.destination }}</p>
+        <p>Express: {{ form.express }}</p>
+        <p>Submit: {{ form.submit }}</p>
+        <p>Cancel: {{ form.cancel }}</p>
+    </form>
+</body>
+</html>
